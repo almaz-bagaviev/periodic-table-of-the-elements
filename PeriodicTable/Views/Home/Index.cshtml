@@ -1,15 +1,110 @@
 ﻿@model Repository
 
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Периодическая система химических элемеентов Д.И.Менделеева</title>
+    <title>Периодическая система химических элементов Д.И.Менделеева</title>
 </head>
+
 <body>
+
+    @{
+        var chemicalElements = Model.ChemicalElements;
+        int Count = chemicalElements.Count;
+        int value;
+    }
+
     <table border="1">
+        <caption>Периодическая система химических элементов Д.И.Менделеева</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Периоды</th>
+                <th rowspan="2">Ряды</th>
+                <th colspan="11">Группы элементов</th>
+            </tr>
+
+            <tr>
+                @for (int i = 1; i < 11 - 3; i++)
+                {
+                    <th>@i</th>
+                }
+                <th colspan="4"></th>
+            </tr>
+        </thead>
+
+        <tr>
+            @{
+                value = 1;
+            }
+            <th>@value</th>
+            <th>@value</th>
+            <th>
+                <div>
+                    <p>@chemicalElements[0].AtomicNumber</p>
+                    <p>@chemicalElements[0].Symbol</p>
+                    <p>@chemicalElements[0].Name</p>
+                    <p>@chemicalElements[0].AverageAtomicMass</p>
+                </div>
+            </th>
+
+            @for (int i = 0; i < 8; i++)
+            {
+                <th>
+                    <div></div>
+                </th>
+            }
+            <th colspan="3">
+                <div></div>
+            </th>
+            <th>
+                <div>
+                    <p>@chemicalElements[1].AtomicNumber</p>
+                    <p>@chemicalElements[1].Symbol</p>
+                    <p>@chemicalElements[1].Name</p>
+                    <p>@chemicalElements[1].AverageAtomicMass</p>
+                </div>
+            </th>
+        </tr>
+
+        <tr>
+            @{
+                value = 2;
+            }
+            <th>@value</th>
+            <th>@value</th>
+
+            @for (int i = 2; i < 9; i++)
+            {
+                <th>
+                    <p>@chemicalElements[i].AtomicNumber</p>
+                    <p>@chemicalElements[i].Symbol</p>
+                    <p>@chemicalElements[i].Name</p>
+                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                </th>
+            }
+            <th colspan="3">
+                <div></div>
+            </th>
+            <th>
+                <p>@chemicalElements[9].AtomicNumber</p>
+                <p>@chemicalElements[9].Symbol</p>
+                <p>@chemicalElements[9].Name</p>
+                <p>@chemicalElements[9].AverageAtomicMass</p>
+            </th>
+
+
+
+
+
+
+        </tr>
+
+
+
+
         @foreach (var e in Model.ChemicalElements)
         {
             <tr>
@@ -24,4 +119,5 @@
 
 
 </body>
+
 </html>
