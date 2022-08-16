@@ -1,0 +1,27 @@
+﻿@model Repository
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Периодическая система химических элемеентов Д.И.Менделеева</title>
+</head>
+<body>
+    <table border="1">
+        @foreach (var e in Model.ChemicalElements)
+        {
+            <tr>
+                <th>@e.AtomicNumber</th>
+                <th>@e.Symbol</th>
+                <th>@e.Name</th>
+                <th>@e.AverageAtomicMass</th>
+            </tr>
+        }
+    </table>
+
+
+
+</body>
+</html>
