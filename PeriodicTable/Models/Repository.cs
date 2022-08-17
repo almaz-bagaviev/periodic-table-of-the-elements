@@ -98,7 +98,7 @@ public class Repository
         ChemicalElement lead = new(82, "Pb", "Свинец", 207.19);
         ChemicalElement bismuth = new(83, "Bi", "Висмут", 186.207);
         ChemicalElement polonium = new(84, "Po", "Полоний", "[210]");
-        ChemicalElement astatine = new(85, "At", "Висмут", "[210]");
+        ChemicalElement astatine = new(85, "At", "Астат", "[210]");
 
         ChemicalElement radon = new(86, "Rn", "Радон", "[222]");
         ChemicalElement francium = new(87, "Fr", "Франций", "[223]");
