@@ -115,14 +115,14 @@ public class Repository
 
         this.ChemicalElements = new()
         {
-            hidrogen,helium, lithium, beryllium, boron, carbon, nitrogen, oxygen, fluorine, neon,
+            hidrogen, helium, lithium, beryllium, boron, carbon, nitrogen, oxygen, fluorine, neon,
             sodium, magnesium, aluminium, silicon, phosphorus, sulfur, chlorine, argon, potassium, calcium,
             scandium, titanium, vanadium, chromium, marganese, iron, cobalt, nickel, copper, zinc,
             gallium, germanium, arsenic, selenium, bromine, krypton, rubidium, strontium, yttrium, zicronium,
             niobium, molybdenum, technetium, ruthenium, rhodium, palladium, silver, cadmium, indium, tin,
             antimony, tellurium, iodine, xenon, caesium, barium, hafnium, tantalum, tungsten, rhenium,
             osmium, iridium, platinum, gold, mercury, thallium, lead, bismuth, polonium, astatine,
-            radon, francium, radium, rutherfordium, dubnium,seaborgium, bohrium, hassium
+            radon, francium, radium, rutherfordium, dubnium, seaborgium, bohrium, hassium
         };
 
     }
@@ -153,7 +153,7 @@ public class Repository
 
         this.Lanthanides = new()
         {
-            lanthanum, cerium, praseodymium, neodymium, promethium, samarium, europium, gadolinium,teribium,
+            lanthanum, cerium, praseodymium, neodymium, promethium, samarium, europium, gadolinium, teribium,
             disprosium, holmium, erbium, thulium, ytterbium, lutetium
         };
     }
