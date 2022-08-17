@@ -20,7 +20,7 @@ public class Actinide : IElement
     }
 
     /// <summary>
-    /// Лантаноиды
+    /// Актиноиды
     /// </summary>
     /// <param name="atomicNumber">Порядковый номер</param>
     /// <param name="symbol">Символ элемента</param>
@@ -36,7 +36,7 @@ public class Actinide : IElement
     }
 
     /// <summary>
-    /// Лантаноиды
+    /// Актиноиды
     /// </summary>
     /// <param name="atomicNumber">Порядковый номер</param>
     /// <param name="symbol">Символ элемента</param>
