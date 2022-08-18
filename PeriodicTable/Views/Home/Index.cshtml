@@ -263,7 +263,7 @@
             <td>
                 <div>
                     <p>57-71</p>
-                    <p>Лантаноиды</p>
+                    <p>ЛАНТАНОИДЫ</p>
                 </div>
             </td>
 
@@ -337,7 +337,7 @@
             <td>
                 <div>
                     <p>89-103</p>
-                    <p>Актиноиды</p>
+                    <p>АКТИНОИДЫ</p>
                 </div>
             </td>
 
@@ -393,7 +393,89 @@
             <td>HR</td>
             <td colspan="4"></td>
         </tr>
+    </table>
 
+    <div>
+        <p>ЛАНТАНОИДЫ</p>
+    </div>
+
+    <table border="1">
+        <tr>
+            @for (int i = 0; i < 4; i++)
+            {
+                <td>
+                    <p>@Model.Lanthanides[i].AtomicNumber</p>
+                    <p>@Model.Lanthanides[i].Symbol</p>
+                    <p>@Model.Lanthanides[i].Name</p>
+                    <p>@Model.Lanthanides[i].AverageAtomicMass</p>
+                </td>
+            }
+
+            <td>
+                <p>@Model.Lanthanides[4].AtomicNumber</p>
+                <p>@Model.Lanthanides[4].Symbol</p>
+                <p>@Model.Lanthanides[4].Name</p>
+                <p>@Model.Lanthanides[4].AverageAtomicMassString</p>
+            </td>
+
+             @for (int i = 5; i < 5+10; i++)
+            {
+                <td>
+                    <p>@Model.Lanthanides[i].AtomicNumber</p>
+                    <p>@Model.Lanthanides[i].Symbol</p>
+                    <p>@Model.Lanthanides[i].Name</p>
+                    <p>@Model.Lanthanides[i].AverageAtomicMass</p>
+                </td>
+            }
+
+        </tr>
+    </table>
+
+    <div>
+        <p>АКТИНОИДЫ</p>
+    </div>
+
+    <table border="1">
+        <tr>    
+             <td>
+                    <p>@Model.Actinides[0].AtomicNumber</p>
+                    <p>@Model.Actinides[0].Symbol</p>
+                    <p>@Model.Actinides[0].Name</p>
+                    <p>@Model.Actinides[0].AverageAtomicMassString</p>
+                </td>
+
+                 <td>
+                    <p>@Model.Actinides[1].AtomicNumber</p>
+                    <p>@Model.Actinides[1].Symbol</p>
+                    <p>@Model.Actinides[1].Name</p>
+                    <p>@Model.Actinides[1].AverageAtomicMass</p>
+                </td>
+
+                <td>
+                    <p>@Model.Actinides[2].AtomicNumber</p>
+                    <p>@Model.Actinides[2].Symbol</p>
+                    <p>@Model.Actinides[2].Name</p>
+                    <p>@Model.Actinides[2].AverageAtomicMassString</p>
+                </td>
+
+                <td>
+                    <p>@Model.Actinides[3].AtomicNumber</p>
+                    <p>@Model.Actinides[3].Symbol</p>
+                    <p>@Model.Actinides[3].Name</p>
+                    <p>@Model.Actinides[3].AverageAtomicMass</p>
+                </td>
+            
+            
+            @for (int i = 4; i < 4+11; i++)
+            {
+                <td>
+                    <p>@Model.Actinides[i].AtomicNumber</p>
+                    <p>@Model.Actinides[i].Symbol</p>
+                    <p>@Model.Actinides[i].Name</p>
+                    <p>@Model.Actinides[i].AverageAtomicMassString</p>
+                </td>
+            }
+        </tr>
     </table>
 
 </body>
