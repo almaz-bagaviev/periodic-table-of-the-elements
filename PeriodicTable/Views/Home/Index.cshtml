@@ -13,8 +13,31 @@
 
     @{
         var chemicalElements = Model.ChemicalElements;
-        int Count = chemicalElements.Count;
         int value;
+    }
+
+    @functions {
+        enum Elements
+        {
+            mainElements,
+            lanthanides,
+            actinides
+        }
+    }
+
+    @functions {
+        double MassDouble(int i, Elements elements)
+        {
+            if (elements == Elements.mainElements) return Model.ChemicalElements[i].AverageAtomicMass;
+            else if (elements == Elements.lanthanides) return Model.Lanthanides[i].AverageAtomicMass;
+            else return Model.Actinides[i].AverageAtomicMass;
+        }
+        string MassString(int i, Elements elements)
+        {
+            if (elements == Elements.mainElements) return Model.ChemicalElements[i].AverageAtomicMassString;
+            else if (elements == Elements.lanthanides) return Model.Lanthanides[i].AverageAtomicMassString;
+            else return Model.Actinides[i].AverageAtomicMassString;
+        }
     }
 
     <div>
@@ -58,15 +81,15 @@
                     <p>@chemicalElements[0].Name</p>
                     <p>@chemicalElements[0].AverageAtomicMass</p>
                 </div>
-                </th>
+            </td>
 
-                @for (int i = 0; i < 6; i++)
-                {
+            @for (int i = 0; i < 6; i++)
+            {
                 <td>
                     <div></div>
                 </td>
-                }
-
+            }
+            
             <td colspan="3">
                 <div></div>
             </td>
@@ -187,30 +210,20 @@
             <td rowspan="2">@value</td>
             <td>6</td>
 
-            @for (int i = 36; i < 36 + 6; i++)
+            @for (int i = 36; i < 36 + 10; i++)
             {
                 <td>
                     <p>@chemicalElements[i].AtomicNumber</p>
                     <p>@chemicalElements[i].Symbol</p>
                     <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
-                </td>
-            }
-
-            <td>
-                <p>@chemicalElements[42].AtomicNumber</p>
-                <p>@chemicalElements[42].Symbol</p>
-                <p>@chemicalElements[42].Name</p>
-                <p>@chemicalElements[42].AverageAtomicMassString</p>
-            </td>
-
-            @for (int i = 43; i < 43 + 3; i++)
-            {
-                <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    @if (i == 42)
+                    {
+                        <p>@MassString(i, Elements.mainElements)</p>
+                    }
+                    else
+                    {
+                        <p>@MassDouble(i, Elements.mainElements)</p>
+                    }
                 </td>
             }
 
@@ -285,24 +298,21 @@
         <tr>
             <td>9</td>
 
-            @for (int i = 63; i < 63 + 5; i++)
+            @for (int i = 63; i < 63 + 7; i++)
             {
                 <td>
 
                     <p>@chemicalElements[i].AtomicNumber</p>
                     <p>@chemicalElements[i].Symbol</p>
                     <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
-                </td>
-            }
-
-            @for (int i = 68; i < 68 + 2; i++)
-            {
-                <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMassString</p>
+                    @if (i == 68 || i == 69)
+                    {
+                        <p>@MassString(i, Elements.mainElements)</p>
+                    }
+                    else
+                    {
+                        <p>@MassDouble(i, Elements.mainElements)</p>
+                    }
                 </td>
             }
 
@@ -401,30 +411,20 @@
 
     <table border="1">
         <tr>
-            @for (int i = 0; i < 4; i++)
+            @for (int i = 0; i < 15; i++)
             {
                 <td>
                     <p>@Model.Lanthanides[i].AtomicNumber</p>
                     <p>@Model.Lanthanides[i].Symbol</p>
                     <p>@Model.Lanthanides[i].Name</p>
-                    <p>@Model.Lanthanides[i].AverageAtomicMass</p>
-                </td>
-            }
-
-            <td>
-                <p>@Model.Lanthanides[4].AtomicNumber</p>
-                <p>@Model.Lanthanides[4].Symbol</p>
-                <p>@Model.Lanthanides[4].Name</p>
-                <p>@Model.Lanthanides[4].AverageAtomicMassString</p>
-            </td>
-
-             @for (int i = 5; i < 5+10; i++)
-            {
-                <td>
-                    <p>@Model.Lanthanides[i].AtomicNumber</p>
-                    <p>@Model.Lanthanides[i].Symbol</p>
-                    <p>@Model.Lanthanides[i].Name</p>
-                    <p>@Model.Lanthanides[i].AverageAtomicMass</p>
+                    @if (i == 4)
+                    {
+                        <p>@MassString(i, Elements.lanthanides)</p>
+                    }
+                    else
+                    {
+                        <p>@MassDouble(i, Elements.lanthanides)</p>
+                    }
                 </td>
             }
 
@@ -436,46 +436,27 @@
     </div>
 
     <table border="1">
-        <tr>    
-             <td>
-                    <p>@Model.Actinides[0].AtomicNumber</p>
-                    <p>@Model.Actinides[0].Symbol</p>
-                    <p>@Model.Actinides[0].Name</p>
-                    <p>@Model.Actinides[0].AverageAtomicMassString</p>
-                </td>
-
-                 <td>
-                    <p>@Model.Actinides[1].AtomicNumber</p>
-                    <p>@Model.Actinides[1].Symbol</p>
-                    <p>@Model.Actinides[1].Name</p>
-                    <p>@Model.Actinides[1].AverageAtomicMass</p>
-                </td>
-
-                <td>
-                    <p>@Model.Actinides[2].AtomicNumber</p>
-                    <p>@Model.Actinides[2].Symbol</p>
-                    <p>@Model.Actinides[2].Name</p>
-                    <p>@Model.Actinides[2].AverageAtomicMassString</p>
-                </td>
-
-                <td>
-                    <p>@Model.Actinides[3].AtomicNumber</p>
-                    <p>@Model.Actinides[3].Symbol</p>
-                    <p>@Model.Actinides[3].Name</p>
-                    <p>@Model.Actinides[3].AverageAtomicMass</p>
-                </td>
-            
-            
-            @for (int i = 4; i < 4+11; i++)
+        <tr>
+            @for (int i = 0; i < 15; i++)
             {
                 <td>
                     <p>@Model.Actinides[i].AtomicNumber</p>
                     <p>@Model.Actinides[i].Symbol</p>
                     <p>@Model.Actinides[i].Name</p>
-                    <p>@Model.Actinides[i].AverageAtomicMassString</p>
+
+                    @if (i == 1 || i == 3)
+                    {
+                        <p>@MassDouble(i, Elements.actinides)</p>
+                    }
+                    else
+                    {
+                        <p>@MassString(i, Elements.actinides)</p>
+                    }
                 </td>
             }
+
         </tr>
+
     </table>
 
 </body>
