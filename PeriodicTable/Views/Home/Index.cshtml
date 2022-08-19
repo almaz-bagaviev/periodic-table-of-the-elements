@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Периодическая система химических элементов Д.И.Менделеева</title>
+    <link rel="stylesheet" href="~/css/style.css">
 </head>
 
 <body>
@@ -75,11 +76,11 @@
             <td>@value</td>
             <td>@value</td>
             <td>
-                <div>
-                    <p>@chemicalElements[0].AtomicNumber</p>
-                    <p>@chemicalElements[0].Symbol</p>
-                    <p>@chemicalElements[0].Name</p>
-                    <p>@chemicalElements[0].AverageAtomicMass</p>
+                <div class="non-metal">
+                    <p class="item">@chemicalElements[0].AtomicNumber</p>
+                    <p class="item">@chemicalElements[0].Symbol</p>
+                    <p class="item">@chemicalElements[0].Name</p>
+                    <p class="item">@chemicalElements[0].AverageAtomicMass</p>
                 </div>
             </td>
 
@@ -89,16 +90,16 @@
                     <div></div>
                 </td>
             }
-            
+
             <td colspan="3">
                 <div></div>
             </td>
             <td>
-                <div>
-                    <p>@chemicalElements[1].AtomicNumber</p>
-                    <p>@chemicalElements[1].Symbol</p>
-                    <p>@chemicalElements[1].Name</p>
-                    <p>@chemicalElements[1].AverageAtomicMass</p>
+                <div class="noble-gas">
+                    <p class="item">@chemicalElements[1].AtomicNumber</p>
+                    <p class="item">@chemicalElements[1].Symbol</p>
+                    <p class="item">@chemicalElements[1].Name</p>
+                    <p class="item">@chemicalElements[1].AverageAtomicMass</p>
                 </div>
             </td>
         </tr>
@@ -112,11 +113,20 @@
 
             @for (int i = 2; i < 2 + 7; i++)
             {
+                string divClass = string.Empty;
+                @if (i == 2) divClass = "alkali-metal";
+                else if (i == 3) divClass = "alkaline-earth-metal";
+                else if (i == 4) divClass = "metalloid";
+                else if (i >= 5 && i <= 7) divClass = "non-metal";
+                else if (i == 8) divClass = "halogen";
+                else divClass = "noble-gas";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
 
@@ -124,10 +134,12 @@
                 <div></div>
             </td>
             <td>
-                <p>@chemicalElements[9].AtomicNumber</p>
-                <p>@chemicalElements[9].Symbol</p>
-                <p>@chemicalElements[9].Name</p>
-                <p>@chemicalElements[9].AverageAtomicMass</p>
+                <div class="noble-gas">
+                    <p class="item">@chemicalElements[9].AtomicNumber</p>
+                    <p class="item">@chemicalElements[9].Symbol</p>
+                    <p class="item">@chemicalElements[9].Name</p>
+                    <p class="item">@chemicalElements[9].AverageAtomicMass</p>
+                </div>
             </td>
         </tr>
 
@@ -140,11 +152,21 @@
 
             @for (int i = 10; i < 10 + 7; i++)
             {
+                string divClass = string.Empty;
+                @if (i == 10) divClass = "alkali-metal";
+                else if (i == 11) divClass = "alkaline-earth-metal";
+                else if (i == 12) divClass = "metal";
+                else if (i == 13) divClass = "metalloid";
+                else if (i == 14 || i == 15) divClass = "non-metal";
+                else if (i == 16) divClass = "halogen";
+                else divClass = "noble-gas";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
 
@@ -152,10 +174,12 @@
                 <div></div>
             </td>
             <td>
-                <p>@chemicalElements[17].AtomicNumber</p>
-                <p>@chemicalElements[17].Symbol</p>
-                <p>@chemicalElements[17].Name</p>
-                <p>@chemicalElements[17].AverageAtomicMass</p>
+                <div class="noble-gas">
+                    <p class="item">@chemicalElements[17].AtomicNumber</p>
+                    <p class="item">@chemicalElements[17].Symbol</p>
+                    <p class="item">@chemicalElements[17].Name</p>
+                    <p class="item">@chemicalElements[17].AverageAtomicMass</p>
+                </div>
             </td>
         </tr>
 
@@ -165,14 +189,19 @@
 
             @for (int i = 18; i < 18 + 10; i++)
             {
+                string divClass = string.Empty;
+                @if (i == 18) divClass = "alkali-metal";
+                else if (i == 19) divClass = "alkaline-earth-metal";
+                else divClass = "transition-metal";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
-
             <td>
                 <div></div>
             </td>
@@ -183,11 +212,19 @@
 
             @for (int i = 28; i < 28 + 7; i++)
             {
+                string divClass = string.Empty;
+                if (i == 28 || i == 29) divClass = "transition-metal";
+                else if (i == 30) divClass = "metal";
+                else if (i == 31 || i == 32) divClass = "metalloid";
+                else if (i == 33) divClass = "non-metal";
+                else divClass = "halogen";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
 
@@ -195,10 +232,12 @@
                 <div></div>
             </td>
             <td>
-                <p>@chemicalElements[35].AtomicNumber</p>
-                <p>@chemicalElements[35].Symbol</p>
-                <p>@chemicalElements[35].Name</p>
-                <p>@chemicalElements[35].AverageAtomicMass</p>
+                <div class="noble-gas">
+                    <p class="item">@chemicalElements[35].AtomicNumber</p>
+                    <p class="item">@chemicalElements[35].Symbol</p>
+                    <p class="item">@chemicalElements[35].Name</p>
+                    <p class="item">@chemicalElements[35].AverageAtomicMass</p>
+                </div>
             </td>
         </tr>
 
@@ -206,24 +245,29 @@
             @{
                 value = 5;
             }
-
             <td rowspan="2">@value</td>
             <td>6</td>
 
             @for (int i = 36; i < 36 + 10; i++)
             {
+                string divClass = string.Empty;
+                if (i == 36) divClass = "alkali-metal";
+                else if (i == 37) divClass = "alkaline-earth-metal";
+                else divClass = "transition-metal";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    @if (i == 42)
-                    {
-                        <p>@MassString(i, Elements.mainElements)</p>
-                    }
-                    else
-                    {
-                        <p>@MassDouble(i, Elements.mainElements)</p>
-                    }
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        @if (i == 42)
+                        {
+                            <p class="item">@MassString(i, Elements.mainElements)</p>
+                        }
+                        else
+                        {
+                            <p class="item">@MassDouble(i, Elements.mainElements)</p>
+                        }
+                    </div>
                 </td>
             }
 
@@ -234,13 +278,21 @@
 
         <tr>
             <td>7</td>
+
             @for (int i = 46; i < 46 + 7; i++)
             {
+                string divClass = string.Empty;
+                if (i == 46 || i == 47) divClass = "transition-metal";
+                else if (i == 48 || i == 49) divClass = "metal";
+                else if (i == 50 || i == 51) divClass = "metalloid";
+                else divClass = "halogen";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
 
@@ -248,10 +300,12 @@
                 <div></div>
             </td>
             <td>
-                <p>@chemicalElements[53].AtomicNumber</p>
-                <p>@chemicalElements[53].Symbol</p>
-                <p>@chemicalElements[53].Name</p>
-                <p>@chemicalElements[53].AverageAtomicMass</p>
+                <div class="noble-gas">
+                    <p class="item">@chemicalElements[53].AtomicNumber</p>
+                    <p class="item">@chemicalElements[53].Symbol</p>
+                    <p class="item">@chemicalElements[53].Name</p>
+                    <p class="item">@chemicalElements[53].AverageAtomicMass</p>
+                </div>
             </td>
         </tr>
 
@@ -265,28 +319,35 @@
 
             @for (int i = 54; i < 54 + 2; i++)
             {
+                string divClass = string.Empty;
+                if (i == 54) divClass = "alkali-metal";
+                else divClass = "alkaline-earth-metal";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
 
             <td>
-                <div>
-                    <p>57-71</p>
-                    <p>ЛАНТАНОИДЫ</p>
+                <div class="lanthanides">
+                    <p class="item">57-71</p>
+                    <p class="item">ЛАНТАНОИДЫ</p>
                 </div>
             </td>
 
             @for (int i = 56; i < 56 + 7; i++)
             {
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMass</p>
+                    <div class="transition-metal">
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                    </div>
                 </td>
             }
 
@@ -300,19 +361,25 @@
 
             @for (int i = 63; i < 63 + 7; i++)
             {
+                string divClass = string.Empty;
+                if (i == 63 || i == 64) divClass = "transition-metal";
+                else if (i >= 65 || i <= 67) divClass = "metal";
+                else if (i == 68) divClass = "metalloid";
+                else divClass = "halogen";
                 <td>
-
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    @if (i == 68 || i == 69)
-                    {
-                        <p>@MassString(i, Elements.mainElements)</p>
-                    }
-                    else
-                    {
-                        <p>@MassDouble(i, Elements.mainElements)</p>
-                    }
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        @if (i == 68 || i == 69)
+                        {
+                            <p class="item">@MassString(i, Elements.mainElements)</p>
+                        }
+                        else
+                        {
+                            <p class="item">@MassDouble(i, Elements.mainElements)</p>
+                        }
+                    </div>
                 </td>
             }
 
@@ -320,10 +387,12 @@
                 <div></div>
             </td>
             <td>
-                <p>@chemicalElements[70].AtomicNumber</p>
-                <p>@chemicalElements[70].Symbol</p>
-                <p>@chemicalElements[70].Name</p>
-                <p>@chemicalElements[70].AverageAtomicMassString</p>
+                <div class="noble-gas">
+                    <p class="item">@chemicalElements[70].AtomicNumber</p>
+                    <p class="item">@chemicalElements[70].Symbol</p>
+                    <p class="item">@chemicalElements[70].Name</p>
+                    <p class="item">@chemicalElements[70].AverageAtomicMassString</p>
+                </div>
             </td>
         </tr>
 
@@ -331,33 +400,41 @@
             @{
                 value = 7;
             }
+
             <td>@value</td>
             <td>10</td>
 
             @for (int i = 71; i < 71 + 2; i++)
             {
+                string divClass = string.Empty;
+                if (i == 71) divClass = "alkali-metal";
+                else divClass = "alkaline-earth-metal";
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMassString</p>
+                    <div class=@divClass>
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMassString</p>
+                    </div>
                 </td>
             }
 
             <td>
-                <div>
-                    <p>89-103</p>
-                    <p>АКТИНОИДЫ</p>
+                <div class="actinides">
+                    <p class="item">89-103</p>
+                    <p class="item">АКТИНОИДЫ</p>
                 </div>
             </td>
 
             @for (int i = 73; i < 73 + 5; i++)
             {
                 <td>
-                    <p>@chemicalElements[i].AtomicNumber</p>
-                    <p>@chemicalElements[i].Symbol</p>
-                    <p>@chemicalElements[i].Name</p>
-                    <p>@chemicalElements[i].AverageAtomicMassString</p>
+                    <div class="transition-metal">
+                        <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <p class="item">@chemicalElements[i].Name</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMassString</p>
+                    </div>
                 </td>
             }
 
@@ -414,17 +491,19 @@
             @for (int i = 0; i < 15; i++)
             {
                 <td>
-                    <p>@Model.Lanthanides[i].AtomicNumber</p>
-                    <p>@Model.Lanthanides[i].Symbol</p>
-                    <p>@Model.Lanthanides[i].Name</p>
-                    @if (i == 4)
-                    {
-                        <p>@MassString(i, Elements.lanthanides)</p>
-                    }
-                    else
-                    {
-                        <p>@MassDouble(i, Elements.lanthanides)</p>
-                    }
+                    <div class="lanthanides">
+                        <p class="item">@Model.Lanthanides[i].AtomicNumber</p>
+                        <p class="item">@Model.Lanthanides[i].Symbol</p>
+                        <p class="item">@Model.Lanthanides[i].Name</p>
+                        @if (i == 4)
+                        {
+                            <p class="item">@MassString(i, Elements.lanthanides)</p>
+                        }
+                        else
+                        {
+                            <p class="item">@MassDouble(i, Elements.lanthanides)</p>
+                        }
+                    </div>
                 </td>
             }
 
@@ -440,21 +519,22 @@
             @for (int i = 0; i < 15; i++)
             {
                 <td>
-                    <p>@Model.Actinides[i].AtomicNumber</p>
-                    <p>@Model.Actinides[i].Symbol</p>
-                    <p>@Model.Actinides[i].Name</p>
+                    <div class="actinides">
+                        <p class="item">@Model.Actinides[i].AtomicNumber</p>
+                        <p class="item">@Model.Actinides[i].Symbol</p>
+                        <p class="item">@Model.Actinides[i].Name</p>
 
-                    @if (i == 1 || i == 3)
-                    {
-                        <p>@MassDouble(i, Elements.actinides)</p>
-                    }
-                    else
-                    {
-                        <p>@MassString(i, Elements.actinides)</p>
-                    }
+                        @if (i == 1 || i == 3)
+                        {
+                            <p class="item">@MassDouble(i, Elements.actinides)</p>
+                        }
+                        else
+                        {
+                            <p class="item">@MassString(i, Elements.actinides)</p>
+                        }
+                    </div>
                 </td>
             }
-
         </tr>
 
     </table>

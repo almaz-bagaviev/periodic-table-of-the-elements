@@ -1,0 +1,45 @@
+﻿.non-metal{
+    background-color: dodgerblue;
+}
+
+.noble-gas{
+    background-color: lightskyblue;
+}
+
+.alkali-metal{
+    background-color: coral;
+}
+
+.alkaline-earth-metal{
+    background-color: sandybrown;
+}
+
+.metalloid{
+    background-color: mediumseagreen;
+}
+
+.halogen{
+    background-color: violet;
+}
+
+.metal{
+    background-color: gold;
+}
+
+.transition-metal{
+    background-color: palegreen;
+}
+
+.lanthanides{
+    background-color: darkcyan;
+}
+
+.actinides{
+    background-color: darkgreen;
+}
+
+.item{
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
