@@ -21,7 +21,7 @@ public class Repository
         ChemicalElement helium = new(2, "He", "Гелий", 4.003);
         ChemicalElement lithium = new(3, "Li", "Литий", 6.941);
         ChemicalElement beryllium = new(4, "Be", "Беррилий", 9.0122);
-        ChemicalElement boron = new(5, "Li", "Бор", 10.811);
+        ChemicalElement boron = new(5, "B", "Бор", 10.811);
 
         ChemicalElement carbon = new(6, "C", "Углерод", 12.011);
         ChemicalElement nitrogen = new(7, "N", "Азот", 14.007);
