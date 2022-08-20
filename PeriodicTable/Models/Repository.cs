@@ -5,10 +5,12 @@ public class Repository
     public List<ChemicalElement> ChemicalElements { get; set; }
     public List<Lanthanide> Lanthanides { get; set; }
     public List<Actinide> Actinides { get; set; }
+    public WebModel GetWebModel { get; set; }
 
     public Repository()
     {
         Initialize();
+        GetWebModel = new();
     }
 
     private void GetElements()
@@ -124,7 +126,6 @@ public class Repository
             osmium, iridium, platinum, gold, mercury, thallium, lead, bismuth, polonium, astatine,
             radon, francium, radium, rutherfordium, dubnium, seaborgium, bohrium, hassium
         };
-
     }
 
     private void GetLanthanides()
