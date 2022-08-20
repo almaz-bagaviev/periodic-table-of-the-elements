@@ -39,6 +39,12 @@
             else if (elements == Elements.lanthanides) return Model.Lanthanides[i].AverageAtomicMassString;
             else return Model.Actinides[i].AverageAtomicMassString;
         }
+        string UrlHref(int number, Elements elements)
+        {
+            if (elements == Elements.mainElements) return Model.GetWebModel.URL(Model.ChemicalElements[number].AtomicNumber);
+            else if (elements == Elements.lanthanides) return Model.GetWebModel.UrlLanthan(Model.Lanthanides[number].AtomicNumber);
+            else return Model.GetWebModel.UrlActin(Model.Actinides[number].AtomicNumber);
+        }
     }
 
     <div>
@@ -78,7 +84,9 @@
             <td>
                 <div class="non-metal">
                     <p class="item">@chemicalElements[0].AtomicNumber</p>
-                    <p class="item">@chemicalElements[0].Symbol</p>
+                    <a href="@UrlHref(0, Elements.mainElements)">
+                        <p class="item">@chemicalElements[0].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[0].Name</p>
                     <p class="item">@chemicalElements[0].AverageAtomicMass</p>
                 </div>
@@ -97,7 +105,9 @@
             <td>
                 <div class="noble-gas">
                     <p class="item">@chemicalElements[1].AtomicNumber</p>
-                    <p class="item">@chemicalElements[1].Symbol</p>
+                    <a href="@UrlHref(1, Elements.mainElements)">
+                        <p class="item">@chemicalElements[1].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[1].Name</p>
                     <p class="item">@chemicalElements[1].AverageAtomicMass</p>
                 </div>
@@ -123,7 +133,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -136,7 +148,9 @@
             <td>
                 <div class="noble-gas">
                     <p class="item">@chemicalElements[9].AtomicNumber</p>
-                    <p class="item">@chemicalElements[9].Symbol</p>
+                    <a href="@UrlHref(9, Elements.mainElements)">
+                        <p class="item">@chemicalElements[9].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[9].Name</p>
                     <p class="item">@chemicalElements[9].AverageAtomicMass</p>
                 </div>
@@ -163,7 +177,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -176,7 +192,9 @@
             <td>
                 <div class="noble-gas">
                     <p class="item">@chemicalElements[17].AtomicNumber</p>
-                    <p class="item">@chemicalElements[17].Symbol</p>
+                    <a href="@UrlHref(17, Elements.mainElements)">
+                        <p class="item">@chemicalElements[17].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[17].Name</p>
                     <p class="item">@chemicalElements[17].AverageAtomicMass</p>
                 </div>
@@ -196,7 +214,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -221,7 +241,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -234,7 +256,9 @@
             <td>
                 <div class="noble-gas">
                     <p class="item">@chemicalElements[35].AtomicNumber</p>
-                    <p class="item">@chemicalElements[35].Symbol</p>
+                    <a href="@UrlHref(35, Elements.mainElements)">
+                        <p class="item">@chemicalElements[35].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[35].Name</p>
                     <p class="item">@chemicalElements[35].AverageAtomicMass</p>
                 </div>
@@ -257,7 +281,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         @if (i == 42)
                         {
@@ -289,6 +315,8 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                        </a>
                         <p class="item">@chemicalElements[i].Symbol</p>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
@@ -302,7 +330,9 @@
             <td>
                 <div class="noble-gas">
                     <p class="item">@chemicalElements[53].AtomicNumber</p>
-                    <p class="item">@chemicalElements[53].Symbol</p>
+                    <a href="@UrlHref(53, Elements.mainElements)">
+                        <p class="item">@chemicalElements[53].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[53].Name</p>
                     <p class="item">@chemicalElements[53].AverageAtomicMass</p>
                 </div>
@@ -325,7 +355,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -344,7 +376,9 @@
                 <td>
                     <div class="transition-metal">
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -369,7 +403,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         @if (i == 68 || i == 69)
                         {
@@ -389,7 +425,9 @@
             <td>
                 <div class="noble-gas">
                     <p class="item">@chemicalElements[70].AtomicNumber</p>
-                    <p class="item">@chemicalElements[70].Symbol</p>
+                    <a href="@UrlHref(70, Elements.mainElements)">
+                        <p class="item">@chemicalElements[70].Symbol</p>
+                    </a>
                     <p class="item">@chemicalElements[70].Name</p>
                     <p class="item">@chemicalElements[70].AverageAtomicMassString</p>
                 </div>
@@ -412,7 +450,9 @@
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMassString</p>
                     </div>
@@ -431,7 +471,9 @@
                 <td>
                     <div class="transition-metal">
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
-                        <p class="item">@chemicalElements[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
+                        </a>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMassString</p>
                     </div>
@@ -493,7 +535,9 @@
                 <td>
                     <div class="lanthanides">
                         <p class="item">@Model.Lanthanides[i].AtomicNumber</p>
-                        <p class="item">@Model.Lanthanides[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.lanthanides)">
+                            <p class="item">@Model.Lanthanides[i].Symbol</p>
+                        </a>
                         <p class="item">@Model.Lanthanides[i].Name</p>
                         @if (i == 4)
                         {
@@ -521,7 +565,9 @@
                 <td>
                     <div class="actinides">
                         <p class="item">@Model.Actinides[i].AtomicNumber</p>
-                        <p class="item">@Model.Actinides[i].Symbol</p>
+                        <a href="@UrlHref(i, Elements.actinides)">
+                            <p class="item">@Model.Actinides[i].Symbol</p>
+                        </a>
                         <p class="item">@Model.Actinides[i].Name</p>
 
                         @if (i == 1 || i == 3)
