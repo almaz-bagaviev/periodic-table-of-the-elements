@@ -1,14 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace PeriodicTable.Controllers
+namespace PeriodicTable.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    ChemicalElementsContext context;
+    Repository repository;
+    DbInitializer initializer;
+
+    public HomeController(ChemicalElementsContext context)
     {
-        public IActionResult Index()
-        {
-            Repository repository = new();
-            
-            return View(repository);
-        }
+        this.context = context;
+        this.repository = new();
+        this.initializer = new();
+        initializer.Initialize(context);
+    }
+
+    public IActionResult Index()
+    {      
+        return View(repository);
     }
 }
