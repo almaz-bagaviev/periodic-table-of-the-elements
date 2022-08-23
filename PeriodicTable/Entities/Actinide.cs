@@ -4,10 +4,13 @@ public class Actinide : IElement
 {
     public int Id { get; set; }
     public int AtomicNumber { get; set; }
+
+    [Column(TypeName = "nvarchar(2)")]
     public string Symbol { get; set; }
     public string Name { get; set; }
-    public double AverageAtomicMass { get; set; }
-    public string AverageAtomicMassString { get; set; }
+
+    [Column(TypeName = "nvarchar(8)")]
+    public string AverageAtomicMass { get; set; }
 
     /// <summary>
     /// Актиноиды
@@ -16,7 +19,7 @@ public class Actinide : IElement
     /// <param name="symbol">Символ элемента</param>
     /// <param name="name">Название элемента</param>
     /// <param name="averageAtomicMass">Относительная Атомная масса</param>
-    public Actinide(int atomicNumber, string symbol, string name, double averageAtomicMass)
+    public Actinide(int atomicNumber, string symbol, string name, string averageAtomicMass)
     {
         this.AtomicNumber = atomicNumber;
         this.Symbol = symbol;
@@ -24,18 +27,8 @@ public class Actinide : IElement
         this.AverageAtomicMass = averageAtomicMass;
     }
 
-    /// <summary>
-    /// Актиноиды
-    /// </summary>
-    /// <param name="atomicNumber">Порядковый номер</param>
-    /// <param name="symbol">Символ элемента</param>
-    /// <param name="name">Название элемента</param>
-    /// <param name="averageAtomicMassString">[Относительная Атомная масса]</param>
-    public Actinide(int atomicNumber, string symbol, string name, string averageAtomicMassString)
+    public Actinide()
     {
-        this.AtomicNumber = atomicNumber;
-        this.Symbol = symbol;
-        this.Name = name;
-        this.AverageAtomicMassString = averageAtomicMassString;
+
     }
 }
