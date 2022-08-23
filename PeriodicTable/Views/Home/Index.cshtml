@@ -27,22 +27,11 @@
     }
 
     @functions {
-        double MassDouble(int i, Elements elements)
-        {
-            if (elements == Elements.mainElements) return Model.ChemicalElements[i].AverageAtomicMass;
-            else if (elements == Elements.lanthanides) return Model.Lanthanides[i].AverageAtomicMass;
-            else return Model.Actinides[i].AverageAtomicMass;
-        }
-        string MassString(int i, Elements elements)
-        {
-            if (elements == Elements.mainElements) return Model.ChemicalElements[i].AverageAtomicMassString;
-            else if (elements == Elements.lanthanides) return Model.Lanthanides[i].AverageAtomicMassString;
-            else return Model.Actinides[i].AverageAtomicMassString;
-        }
         string UrlHref(int number, Elements elements)
         {
             if (elements == Elements.mainElements) return Model.GetWebModel.URL(Model.ChemicalElements[number].AtomicNumber);
-            else if (elements == Elements.lanthanides) return Model.GetWebModel.UrlLanthan(Model.Lanthanides[number].AtomicNumber);
+            else if (elements == Elements.lanthanides) return
+            Model.GetWebModel.UrlLanthan(Model.Lanthanides[number].AtomicNumber);
             else return Model.GetWebModel.UrlActin(Model.Actinides[number].AtomicNumber);
         }
     }
@@ -285,14 +274,7 @@
                             <p class="item">@chemicalElements[i].Symbol</p>
                         </a>
                         <p class="item">@chemicalElements[i].Name</p>
-                        @if (i == 42)
-                        {
-                            <p class="item">@MassString(i, Elements.mainElements)</p>
-                        }
-                        else
-                        {
-                            <p class="item">@MassDouble(i, Elements.mainElements)</p>
-                        }
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
@@ -316,8 +298,8 @@
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
                         <a href="@UrlHref(i, Elements.mainElements)">
+                            <p class="item">@chemicalElements[i].Symbol</p>
                         </a>
-                        <p class="item">@chemicalElements[i].Symbol</p>
                         <p class="item">@chemicalElements[i].Name</p>
                         <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
@@ -407,14 +389,7 @@
                             <p class="item">@chemicalElements[i].Symbol</p>
                         </a>
                         <p class="item">@chemicalElements[i].Name</p>
-                        @if (i == 68 || i == 69)
-                        {
-                            <p class="item">@MassString(i, Elements.mainElements)</p>
-                        }
-                        else
-                        {
-                            <p class="item">@MassDouble(i, Elements.mainElements)</p>
-                        }
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
@@ -429,7 +404,7 @@
                         <p class="item">@chemicalElements[70].Symbol</p>
                     </a>
                     <p class="item">@chemicalElements[70].Name</p>
-                    <p class="item">@chemicalElements[70].AverageAtomicMassString</p>
+                    <p class="item">@chemicalElements[70].AverageAtomicMass</p>
                 </div>
             </td>
         </tr>
@@ -454,7 +429,7 @@
                             <p class="item">@chemicalElements[i].Symbol</p>
                         </a>
                         <p class="item">@chemicalElements[i].Name</p>
-                        <p class="item">@chemicalElements[i].AverageAtomicMassString</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
@@ -475,7 +450,7 @@
                             <p class="item">@chemicalElements[i].Symbol</p>
                         </a>
                         <p class="item">@chemicalElements[i].Name</p>
-                        <p class="item">@chemicalElements[i].AverageAtomicMassString</p>
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
@@ -539,14 +514,7 @@
                             <p class="item">@Model.Lanthanides[i].Symbol</p>
                         </a>
                         <p class="item">@Model.Lanthanides[i].Name</p>
-                        @if (i == 4)
-                        {
-                            <p class="item">@MassString(i, Elements.lanthanides)</p>
-                        }
-                        else
-                        {
-                            <p class="item">@MassDouble(i, Elements.lanthanides)</p>
-                        }
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
@@ -569,15 +537,7 @@
                             <p class="item">@Model.Actinides[i].Symbol</p>
                         </a>
                         <p class="item">@Model.Actinides[i].Name</p>
-
-                        @if (i == 1 || i == 3)
-                        {
-                            <p class="item">@MassDouble(i, Elements.actinides)</p>
-                        }
-                        else
-                        {
-                            <p class="item">@MassString(i, Elements.actinides)</p>
-                        }
+                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
