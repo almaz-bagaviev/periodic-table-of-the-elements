@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Периодическая система химических элементов Д.И.Менделеева</title>
-    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/elements-style.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
         }
     }
 
-    <div>
+    <div class="main-info">
         <p>
             Д. И. Менделеев - один из самых гениальных химиков XIX века;
             провёл многочисленные определения физических констант соединений
@@ -46,7 +46,7 @@
         </p>
     </div>
 
-    <table border="1">
+    <table>
         <caption>Периодическая система химических элементов Д.И.Менделеева</caption>
         <thead>
             <tr>
@@ -465,8 +465,10 @@
 
         <tr>
             <td colspan="2">
-                <p>ВЫСШИЕ ОКСИДЫ</p>
-                <p>ОКСИДЫ</p>
+                <div class="oxides">
+                    <p>высшие</p>
+                    <p>оксиды</p>
+                </div>
             </td>
             <td>R<sub>2</sub>O</td>
             <td>RO</td>
@@ -479,9 +481,11 @@
         </tr>
         <tr>
             <td colspan="2">
-                <p>ЛЕТУЧИЕ</p>
-                <p>ВОДОРОДНЫЕ</p>
-                <p>СОЕДИНЕНИЯ</p>
+                <div class="volatile-hydrogen-compounds">
+                    <p>летучие</p>
+                    <p>водородные</p>
+                    <p>соединения</p>
+                </div>
             </td>
 
             @for (int i = 0; i < 3; i++)
@@ -503,7 +507,7 @@
         <p>ЛАНТАНОИДЫ</p>
     </div>
 
-    <table border="1">
+    <table>
         <tr>
             @for (int i = 0; i < 15; i++)
             {
@@ -526,7 +530,7 @@
         <p>АКТИНОИДЫ</p>
     </div>
 
-    <table border="1">
+    <table>
         <tr>
             @for (int i = 0; i < 15; i++)
             {
