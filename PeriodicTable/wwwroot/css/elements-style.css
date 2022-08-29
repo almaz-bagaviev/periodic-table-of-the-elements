@@ -1,0 +1,73 @@
+﻿* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.main-info {
+    width: 1000px;
+}
+
+table tr td {
+    border: 1px solid;
+}
+
+table tr td div {
+    width: 100px;
+    height: 80px;
+}
+
+.non-metal {
+    background-color: lightskyblue;
+}
+
+.noble-gas {
+    background-color: silver;
+}
+
+.alkali-metal {
+    background-color: lightSalmon;
+}
+
+.alkaline-earth-metal {
+    background-color: tomato;
+}
+
+.metalloid {
+    background-color: mediumseagreen;
+}
+
+.halogen {
+    background-color: mediumOrchid;
+}
+
+.metal {
+    background-color: gold;
+}
+
+.transition-metal {
+    background-color: steelBlue;
+}
+
+.lanthanides {
+    background-color: mediumAquamarine;
+}
+
+.actinides {
+    background-color: darkcyan;
+}
+
+.item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.oxides,
+.volatile-hydrogen-compounds {
+    text-transform: uppercase;
+}
+
+.oxides p,
+.volatile-hydrogen-compounds p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
