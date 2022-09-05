@@ -1,0 +1,34 @@
+﻿@model UserRegistration
+@{
+    ViewData["Title"] = "Registration";
+    Layout = "_Layout";
+}
+
+<h2>Регистрация нового пользователя</h2>
+<form method="post" asp-controller="Account" asp-action="Registration">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <p>
+            <label asp-for="Login"></label>
+        </p>
+        <input asp-for="Login" />
+        <span asp-validation-for="Login"></span>
+    </div>
+    <div>
+        <p>
+            <label asp-for="Password"></label>
+        </p>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <p>
+            <label asp-for="ConfirmPassword"></label>
+        </p>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div>
+        <input type="submit" value="Регистрация" />
+    </div>
+</form>
