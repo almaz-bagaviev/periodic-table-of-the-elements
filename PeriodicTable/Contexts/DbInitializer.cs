@@ -7,7 +7,7 @@ public class DbInitializer
     {
         this.repository = new();
     }
-    
+
     public void Initialize(ChemicalElementsContext context)
     {
         context.Database.EnsureCreated();
@@ -21,7 +21,7 @@ public class DbInitializer
             context.ChemicalElementsTable.Add(c);
         }
 
-        foreach(var l in repository.Lanthanides)
+        foreach (var l in repository.Lanthanides)
         {
             context.LanthanidesTable.Add(l);
         }
