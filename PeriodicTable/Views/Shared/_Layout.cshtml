@@ -1,0 +1,18 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/authentication-styles" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="container">
+    <nav>
+        <div>@await Component.InvokeAsync("Logout")</div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

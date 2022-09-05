@@ -1,0 +1,15 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <div style="width: 650px;">
+        <a href="~/">В начало</a>
+        <a href="#">@User.Identity.Name вошёл</a>
+        <a href="/Home/Index">Выйти</a>
+    </div>
+}
+else
+{
+    <div>
+        <a href="/Account/Login">Вход</a>
+        <a href="/Account/Registration">Регистрация</a>
+    </div>
+}
