@@ -1,0 +1,7 @@
+﻿.container {
+    padding-top: 10px;
+}
+
+.validation-summary-errors {
+    color: red;
+}
