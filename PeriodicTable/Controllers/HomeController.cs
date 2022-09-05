@@ -20,4 +20,9 @@ public class HomeController : Controller
     {      
         return View(repository);
     }
+
+    public IActionResult Start()
+    {
+        return View();
+    }
 }
