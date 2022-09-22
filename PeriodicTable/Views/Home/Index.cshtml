@@ -27,13 +27,12 @@
     }
 
     @functions {
-        string UrlHref(int number, Elements elements)
+        string UrlHref(int number, Elements elements) => elements switch
         {
-            if (elements == Elements.mainElements) return Model.GetWebModel.URL(Model.ChemicalElements[number].AtomicNumber);
-            else if (elements == Elements.lanthanides) return
-            Model.GetWebModel.UrlLanthan(Model.Lanthanides[number].AtomicNumber);
-            else return Model.GetWebModel.UrlActin(Model.Actinides[number].AtomicNumber);
-        }
+            Elements.mainElements => Model.GetWebModel.URL(Model.ChemicalElements[number].AtomicNumber),
+            Elements.lanthanides => Model.GetWebModel.UrlLanthan(Model.Lanthanides[number].AtomicNumber),
+            _ => Model.GetWebModel.UrlActin(Model.Actinides[number].AtomicNumber)
+        };
     }
 
     <div class="main-info">
