@@ -20,5 +20,5 @@ public interface IElement
     /// <summary>
     /// Относительная Атомная масса
     /// </summary>
-    public string AverageAtomicMass { get; set; }
+    public double AverageAtomicMass { get; set; }
 }

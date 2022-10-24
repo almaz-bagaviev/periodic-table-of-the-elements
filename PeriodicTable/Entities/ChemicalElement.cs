@@ -8,9 +8,7 @@ public class ChemicalElement: IElement
     [Column(TypeName = "nvarchar(2)")]
     public string Symbol { get; set; }
     public string Name { get; set; }
-
-    [Column(TypeName = "nvarchar(8)")]
-    public string AverageAtomicMass { get; set; }
+    public double AverageAtomicMass { get; set; }
 
     /// <summary>
     /// Химический элемент
@@ -19,7 +17,7 @@ public class ChemicalElement: IElement
     /// <param name="symbol">Символ элемента</param>
     /// <param name="name">Название элемента</param>
     /// <param name="averageAtomicMass">Относительная Атомная масса</param>
-    public ChemicalElement(int atomicNumber, string symbol, string name, string averageAtomicMass)
+    public ChemicalElement(int atomicNumber, string symbol, string name, double averageAtomicMass)
     {
         this.AtomicNumber = atomicNumber;
         this.Symbol = symbol;
