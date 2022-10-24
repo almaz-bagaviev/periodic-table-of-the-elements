@@ -14,6 +14,8 @@
 
     @{
         var chemicalElements = Model.ChemicalElements;
+        var lanthanides = Model.Lanthanides;
+        var actinides = Model.Actinides;
         int value;
     }
 
@@ -507,7 +509,7 @@
                             <p class="item">@Model.Lanthanides[i].Symbol</p>
                         </a>
                         <p class="item">@Model.Lanthanides[i].Name</p>
-                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                        <p class="item">@lanthanides[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
@@ -530,7 +532,7 @@
                             <p class="item">@Model.Actinides[i].Symbol</p>
                         </a>
                         <p class="item">@Model.Actinides[i].Name</p>
-                        <p class="item">@chemicalElements[i].AverageAtomicMass</p>
+                        <p class="item">@actinides[i].AverageAtomicMass</p>
                     </div>
                 </td>
             }
