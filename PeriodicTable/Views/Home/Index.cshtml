@@ -195,10 +195,7 @@
 
             @for (int i = 18; i < 18 + 10; i++)
             {
-                string divClass = string.Empty;
-                @if (i == 18) divClass = "alkali-metal";
-                else if (i == 19) divClass = "alkaline-earth-metal";
-                else divClass = "transition-metal";
+                string divClass = i == 18 ? "alkali-metal" : i == 19 ? "alkaline-earth-metal" : "transition-metal";
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
@@ -262,10 +259,7 @@
 
             @for (int i = 36; i < 36 + 10; i++)
             {
-                string divClass = string.Empty;
-                if (i == 36) divClass = "alkali-metal";
-                else if (i == 37) divClass = "alkaline-earth-metal";
-                else divClass = "transition-metal";
+                string divClass = i == 36 ? "alkali-metal" : i == 37 ? "alkaline-earth-metal" : "transition-metal";
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
@@ -330,9 +324,7 @@
 
             @for (int i = 54; i < 54 + 2; i++)
             {
-                string divClass = string.Empty;
-                if (i == 54) divClass = "alkali-metal";
-                else divClass = "alkaline-earth-metal";
+                string divClass = i == 54 ? "alkali-metal" : "alkaline-earth-metal";
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
@@ -418,9 +410,7 @@
 
             @for (int i = 71; i < 71 + 2; i++)
             {
-                string divClass = string.Empty;
-                if (i == 71) divClass = "alkali-metal";
-                else divClass = "alkaline-earth-metal";
+                string divClass = i == 71 ? "alkali-metal" : "alkaline-earth-metal";
                 <td>
                     <div class=@divClass>
                         <p class="item">@chemicalElements[i].AtomicNumber</p>
