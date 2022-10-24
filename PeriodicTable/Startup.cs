@@ -51,7 +51,7 @@ public class Startup
         {
             endpoints.MapControllerRoute(
             name: "Default",
-            pattern: "{Controller=Home}/{Action=Start}");
+            pattern: "{Controller=Home}/{Action=Index}");
         });
     }
 }
