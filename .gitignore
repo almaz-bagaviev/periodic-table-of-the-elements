@@ -1,6 +1,7 @@
 #Visual Studio Files
 
 .vs/
+.vscode/
 bin/
 obj/
 
