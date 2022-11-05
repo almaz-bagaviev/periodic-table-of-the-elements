@@ -4,8 +4,3 @@
 .vscode/
 bin/
 obj/
-
-AssemblyInfo.cs
-*.csproj
-*.csproj.user
-*.sln
