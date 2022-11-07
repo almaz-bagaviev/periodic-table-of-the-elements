@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeriodicTable", "PeriodicTable\PeriodicTable.csproj", "{415AA036-5403-4C5C-B95E-78CEDE0E86D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeriodicTable", "PeriodicTable\PeriodicTable.csproj", "{415AA036-5403-4C5C-B95E-78CEDE0E86D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeriodicTableWPF", "PeriodicTableWPF\PeriodicTableWPF.csproj", "{FF9CFDCC-AEFB-4F10-A39C-81053DA98ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{415AA036-5403-4C5C-B95E-78CEDE0E86D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{415AA036-5403-4C5C-B95E-78CEDE0E86D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{415AA036-5403-4C5C-B95E-78CEDE0E86D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9CFDCC-AEFB-4F10-A39C-81053DA98ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9CFDCC-AEFB-4F10-A39C-81053DA98ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9CFDCC-AEFB-4F10-A39C-81053DA98ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9CFDCC-AEFB-4F10-A39C-81053DA98ABC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

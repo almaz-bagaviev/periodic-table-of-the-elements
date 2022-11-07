@@ -1,0 +1,295 @@
+﻿<Window x:Class="PeriodicTableWPF.Views.LanthanidesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeriodicTableWPF.Views"
+        mc:Ignorable="d"
+        Title="Лантаноиды" Height="120" Width="1300">
+
+    <Window.Resources>
+        <Style TargetType="Border" x:Key="borderStyle">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="tBlocksElStyle">
+            <Setter Property="Margin" Value="3,0,0,0"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Row="1"
+            Grid.ColumnSpan="16"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="Л А Н Т А Н О И Д Ы"/>
+
+        <!--Лантан-->
+        <Border Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="LaSymbol" Text="La" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="LaName" Text="Лантан" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="LaAtomicMass" Text="138,906" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="LaNumber" Text="57"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Церий-->
+        <Border Grid.Row="2"
+                Grid.Column="2"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="CeSymbol" Text="Ce" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="CeName" Text="Церий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="CeAtomicMass" Text="140,12" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="CeNumber" Text="58"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Празеодим-->
+        <Border Grid.Row="2"
+                Grid.Column="3"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="PrSymbol" Text="Pr" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="PrName" Text="Празеодим" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="PrAtomicMass" Text="140,908" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="PrNumber" Text="59"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Неодим-->
+        <Border Grid.Row="2"
+                Grid.Column="4"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="NdSymbol" Text="Nd" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="NdName" Text="Неодим" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="NdAtomicMass" Text="144,24" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="NdNumber" Text="60"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Прометий-->
+        <Border Grid.Row="2"
+                Grid.Column="5"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="PmSymbol" Text="Pm" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="PmName" Text="Прометий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="PmAtomicMass" Text="[145]" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="PmNumber" Text="61"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Самарий-->
+        <Border Grid.Row="2"
+                Grid.Column="6"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="SmSymbol" Text="Sm" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="SmName" Text="Самарий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="SmAtomicMass" Text="150,4" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="SmNumber" Text="62"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Европий-->
+        <Border Grid.Row="2"
+                Grid.Column="7"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="EuSymbol" Text="Eu" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="EuName" Text="Европий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="EuAtomicMass" Text="151,96" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="EuNumber" Text="63"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Гадолиний-->
+        <Border Grid.Row="2"
+                Grid.Column="8"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="GdSymbol" Text="Gd" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="GdName" Text="Гадолиний" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="GdAtomicMass" Text="157,25" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="GdNumber" Text="64"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Тербий-->
+        <Border Grid.Row="2"
+                Grid.Column="9"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="TbSymbol" Text="Tb" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="TbName" Text="Тербий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="TbAtomicMass" Text="158,926" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="TbNumber" Text="65"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Диспрозий-->
+        <Border Grid.Row="2"
+                Grid.Column="10"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="DySymbol" Text="Dy" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="DyName" Text="Диспрозий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="DyAtomicMass" Text="162,5" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="DyNumber" Text="66"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Гольмий-->
+        <Border Grid.Row="2"
+                Grid.Column="11"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="HoSymbol" Text="Ho" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="HoName" Text="Гольмий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="HoAtomicMass" Text="164,93" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="HoNumber" Text="67"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Эрбий-->
+        <Border Grid.Row="2"
+                Grid.Column="12"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="ErSymbol" Text="Er" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="ErName" Text="Эрбий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="ErAtomicMass" Text="167,26" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="ErNumber" Text="68"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Тулий-->
+        <Border Grid.Row="2"
+                Grid.Column="13"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="TmSymbol" Text="Tm" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="TmName" Text="Тулий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="TmAtomicMass" Text="168,934" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="TmNumber" Text="69"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Иттербий-->
+        <Border Grid.Row="2"
+                Grid.Column="14"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="YbSymbol" Text="Yb" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="YbName" Text="Иттербий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="YbAtomicMass" Text="173,04" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="YbNumber" Text="70"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!--Люцетий-->
+        <Border Grid.Row="2"
+                Grid.Column="15"
+                Style="{StaticResource borderStyle}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:Name="LuSymbol" Text="Lu" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="LuName" Text="Люцетий" Style="{StaticResource tBlocksElStyle}"/>
+                    <TextBlock x:Name="LuAtomicMass" Text="174,97" Style="{StaticResource tBlocksElStyle}"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock x:Name="LuNumber" Text="71"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
