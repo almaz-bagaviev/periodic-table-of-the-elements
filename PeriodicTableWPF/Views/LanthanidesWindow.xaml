@@ -55,7 +55,7 @@
         <Border Grid.Row="2"
                 Grid.Column="1"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="La">
                 <StackPanel>
                     <TextBlock x:Name="LaSymbol" Text="La" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="LaName" Text="Лантан" Style="{StaticResource tBlocksElStyle}"/>
@@ -71,7 +71,7 @@
         <Border Grid.Row="2"
                 Grid.Column="2"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Ce">
                 <StackPanel>
                     <TextBlock x:Name="CeSymbol" Text="Ce" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="CeName" Text="Церий" Style="{StaticResource tBlocksElStyle}"/>
@@ -87,7 +87,7 @@
         <Border Grid.Row="2"
                 Grid.Column="3"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Pr">
                 <StackPanel>
                     <TextBlock x:Name="PrSymbol" Text="Pr" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="PrName" Text="Празеодим" Style="{StaticResource tBlocksElStyle}"/>
@@ -103,7 +103,7 @@
         <Border Grid.Row="2"
                 Grid.Column="4"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Nd">
                 <StackPanel>
                     <TextBlock x:Name="NdSymbol" Text="Nd" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="NdName" Text="Неодим" Style="{StaticResource tBlocksElStyle}"/>
@@ -119,7 +119,7 @@
         <Border Grid.Row="2"
                 Grid.Column="5"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Pm">
                 <StackPanel>
                     <TextBlock x:Name="PmSymbol" Text="Pm" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="PmName" Text="Прометий" Style="{StaticResource tBlocksElStyle}"/>
@@ -135,7 +135,7 @@
         <Border Grid.Row="2"
                 Grid.Column="6"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Sm">
                 <StackPanel>
                     <TextBlock x:Name="SmSymbol" Text="Sm" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="SmName" Text="Самарий" Style="{StaticResource tBlocksElStyle}"/>
@@ -151,7 +151,7 @@
         <Border Grid.Row="2"
                 Grid.Column="7"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Eu">
                 <StackPanel>
                     <TextBlock x:Name="EuSymbol" Text="Eu" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="EuName" Text="Европий" Style="{StaticResource tBlocksElStyle}"/>
@@ -167,7 +167,7 @@
         <Border Grid.Row="2"
                 Grid.Column="8"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Gd">
                 <StackPanel>
                     <TextBlock x:Name="GdSymbol" Text="Gd" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="GdName" Text="Гадолиний" Style="{StaticResource tBlocksElStyle}"/>
@@ -183,7 +183,7 @@
         <Border Grid.Row="2"
                 Grid.Column="9"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Tb">
                 <StackPanel>
                     <TextBlock x:Name="TbSymbol" Text="Tb" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="TbName" Text="Тербий" Style="{StaticResource tBlocksElStyle}"/>
@@ -199,7 +199,7 @@
         <Border Grid.Row="2"
                 Grid.Column="10"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Dy">
                 <StackPanel>
                     <TextBlock x:Name="DySymbol" Text="Dy" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="DyName" Text="Диспрозий" Style="{StaticResource tBlocksElStyle}"/>
@@ -215,7 +215,7 @@
         <Border Grid.Row="2"
                 Grid.Column="11"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Ho">
                 <StackPanel>
                     <TextBlock x:Name="HoSymbol" Text="Ho" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="HoName" Text="Гольмий" Style="{StaticResource tBlocksElStyle}"/>
@@ -231,7 +231,7 @@
         <Border Grid.Row="2"
                 Grid.Column="12"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Er">
                 <StackPanel>
                     <TextBlock x:Name="ErSymbol" Text="Er" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="ErName" Text="Эрбий" Style="{StaticResource tBlocksElStyle}"/>
@@ -247,7 +247,7 @@
         <Border Grid.Row="2"
                 Grid.Column="13"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Tm">
                 <StackPanel>
                     <TextBlock x:Name="TmSymbol" Text="Tm" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="TmName" Text="Тулий" Style="{StaticResource tBlocksElStyle}"/>
@@ -263,7 +263,7 @@
         <Border Grid.Row="2"
                 Grid.Column="14"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Yb">
                 <StackPanel>
                     <TextBlock x:Name="YbSymbol" Text="Yb" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="YbName" Text="Иттербий" Style="{StaticResource tBlocksElStyle}"/>
@@ -279,7 +279,7 @@
         <Border Grid.Row="2"
                 Grid.Column="15"
                 Style="{StaticResource borderStyle}">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="Lu">
                 <StackPanel>
                     <TextBlock x:Name="LuSymbol" Text="Lu" Style="{StaticResource tBlocksElStyle}"/>
                     <TextBlock x:Name="LuName" Text="Люцетий" Style="{StaticResource tBlocksElStyle}"/>
